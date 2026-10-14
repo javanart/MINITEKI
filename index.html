@@ -22,6 +22,7 @@
             <div class="flex items-center space-x-3">
                 <span class="text-2xl font-black tracking-wider text-blue-500">MINITEKI<span class="text-white">LTD</span></span>
             </div>
+            
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
                 <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
                 <a href="#electrical" class="hover:text-blue-400 transition-colors">Electrical</a>
@@ -29,8 +30,19 @@
                 <a href="#hub" class="hover:text-blue-400 transition-colors">Rilo Javan Hub</a>
                 <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
             </nav>
-            <div>
-                <a href="https://wa.me/250786368180" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-lg shadow-blue-600/20">
+
+            <div class="flex items-center space-x-4">
+                <!-- Language Selector Dropdown -->
+                <div class="flex items-center space-x-1 bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300">
+                    <span>Language:</span>
+                    <select id="langSelect" class="bg-transparent text-blue-400 focus:outline-none cursor-pointer">
+                        <option value="en" selected class="bg-slate-900 text-white">English</option>
+                        <option value="fr" class="bg-slate-900 text-white">Français</option>
+                        <option value="rw" class="bg-slate-900 text-white">Kinyarwanda</option>
+                    </select>
+                </div>
+
+                <a href="https://wa.me/250786368180" target="_blank" class="hidden sm:inline-flex bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-lg shadow-blue-600/20">
                     WhatsApp Hotline ↗
                 </a>
             </div>
@@ -70,182 +82,65 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
-                    <span class="text-xs font-mono text-blue-400 font-bold">Service 01</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Electrical Installation</h3>
-                    <p class="text-slate-400 text-sm mb-6">Complete residential and commercial power installations, panel building, and facility maintenance.</p>
-                    <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Electrical%20Installation%20service." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
-                        Book Service ↗
-                    </a>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all group flex flex-col justify-between">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center text-slate-500">
+                        <span class="text-xs font-mono">Service Image Placeholder</span>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-xs font-mono text-blue-400 font-bold">Service 01</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Electrical Installation</h3>
+                        <p class="text-slate-400 text-sm mb-6">Complete residential and commercial power installations, panel building, and facility maintenance.</p>
+                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Electrical%20Installation%20service." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
+                            Book Service ↗
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
-                    <span class="text-xs font-mono text-blue-400 font-bold">Service 02</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Lighting Solutions</h3>
-                    <p class="text-slate-400 text-sm mb-6">Modern indoor, outdoor, architectural, and smart LED lighting setups designed for elegance and efficiency.</p>
-                    <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Lighting%20Solutions%20service." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
-                        Book Service ↗
-                    </a>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all group flex flex-col justify-between">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center text-slate-500">
+                        <span class="text-xs font-mono">Service Image Placeholder</span>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-xs font-mono text-blue-400 font-bold">Service 02</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Lighting Solutions</h3>
+                        <p class="text-slate-400 text-sm mb-6">Modern indoor, outdoor, architectural, and smart LED lighting setups designed for elegance and efficiency.</p>
+                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Lighting%20Solutions%20service." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
+                            Book Service ↗
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
-                    <span class="text-xs font-mono text-blue-400 font-bold">Service 03</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Wiring & Trunking</h3>
-                    <p class="text-slate-400 text-sm mb-6">Safe, clean, and code-compliant electrical cabling and structured wiring for buildings of any size.</p>
-                    <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Wiring%20service." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
-                        Book Service ↗
-                    </a>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all group flex flex-col justify-between">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center text-slate-500">
+                        <span class="text-xs font-mono">Service Image Placeholder</span>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-xs font-mono text-blue-400 font-bold">Service 03</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Wiring & Trunking</h3>
+                        <p class="text-slate-400 text-sm mb-6">Safe, clean, and code-compliant electrical cabling and structured wiring for buildings of any size.</p>
+                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Wiring%20service." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
+                            Book Service ↗
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Service 4 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-blue-500/50 transition-all group">
-                    <span class="text-xs font-mono text-blue-400 font-bold">Service 04</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Electrical Consultancy</h3>
-                    <p class="text-slate-400 text-sm mb-6">Expert engineering advice, load calculations, blueprint reviews, and technical project supervision.</p>
-                    <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20Electrical%20Consultancy." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
-                        Inquire Now ↗
-                    </a>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all group flex flex-col justify-between">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center text-slate-500">
+                        <span class="text-xs font-mono">Service Image Placeholder</span>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-xs font-mono text-blue-400 font-bold">Service 04</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Electrical Consultancy</h3>
+                        <p class="text-slate-400 text-sm mb-6">Expert engineering advice, load calculations, blueprint reviews, and technical project supervision.</p>
+                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20Electrical%20Consultancy." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
+                            Inquire Now ↗
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Service 5 -->
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-blue-500/50 transition-all group md:col-span-2 lg:col-span-2">
-                    <span class="text-xs font-mono text-blue-400 font-bold">Service 05</span>
-                    <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">CCTV Camera Installation & Security</h3>
-                    <p class="text-slate-400 text-sm mb-6">Advanced HD surveillance systems, night-vision cameras, NVR configurations, and live mobile monitoring setup for absolute security.</p>
-                    <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20CCTV%20Camera%20Installation." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
-                        Book CCTV Installation ↗
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Art Studio Section -->
-    <section id="art-studio" class="py-24 border-t border-slate-800/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-16 text-center">
-                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-bold mb-3">MINITEKI Studio</h2>
-                <p class="text-3xl sm:text-4xl font-extrabold">Art & Creative Design Division</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Design 1 -->
-                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-mono text-indigo-400 font-bold">01. Graphic Design</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Graphic Design</h3>
-                        <p class="text-slate-400 text-sm mb-6">Custom posters, professional flyers, banners, and high-impact visual layouts tailored for corporate and creative use.</p>
-                    </div>
-                    <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Graphic%20Design%20services." target="_blank" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
-                        Request Design ↗
-                    </a>
-                </div>
-
-                <!-- Design 2 -->
-                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-mono text-indigo-400 font-bold">02. Branding</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Branding & Packaging Design</h3>
-                        <p class="text-slate-400 text-sm mb-6">Complete brand identity creation, minimalist logos, corporate guidelines, and professional product packaging design.</p>
-                    </div>
-                    <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Branding%20services." target="_blank" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
-                        Request Branding ↗
-                    </a>
-                </div>
-
-                <!-- Design 3 -->
-                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-mono text-indigo-400 font-bold">03. Social Media</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Social Media Design</h3>
-                        <p class="text-slate-400 text-sm mb-6">Aesthetic feeds, post templates, and digital content engineered specifically for Instagram, TikTok, and Facebook.</p>
-                    </div>
-                    <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Social%20Media%20Design." target="_blank" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
-                        Request Content ↗
-                    </a>
-                </div>
-
-                <!-- Design 4 -->
-                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-mono text-indigo-400 font-bold">04. Digital Art</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Digital Art & Illustration</h3>
-                        <p class="text-slate-400 text-sm mb-6">Breathtaking digital illustrations, conceptual artwork, modern portraits, and creative visual masterpieces crafted with unmatched precision.</p>
-                    </div>
-                    <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Digital%20Art%20services." target="_blank" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
-                        Request Digital Art ↗
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rilo Javan Hub Section -->
-    <section id="hub" class="py-24 bg-slate-950/50 border-t border-slate-800/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-16 text-center">
-                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-bold mb-3">RILOJAVAN Hub</h2>
-                <p class="text-3xl sm:text-4xl font-extrabold">On-Duty & Ads Showcase</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-                    <span class="inline-block bg-blue-900/50 text-blue-400 text-xs px-2.5 py-1 rounded-md font-mono mb-4">Video Ad</span>
-                    <h3 class="text-lg font-bold mb-2">Active Promotional Ad</h3>
-                    <p class="text-slate-400 text-sm">Latest commercial motion graphics and promotional video reel currently running across our digital platforms.</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-                    <span class="inline-block bg-emerald-900/50 text-emerald-400 text-xs px-2.5 py-1 rounded-md font-mono mb-4">On Duty</span>
-                    <h3 class="text-lg font-bold mb-2">On-Duty Field Operations</h3>
-                    <p class="text-slate-400 text-sm">Live updates and snapshots from current electrical installations and engineering sites across Kigali.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-                    <span class="inline-block bg-purple-900/50 text-purple-400 text-xs px-2.5 py-1 rounded-md font-mono mb-4">Art Drop</span>
-                    <h3 class="text-lg font-bold mb-2">Latest Creative Art Drop</h3>
-                    <p class="text-slate-400 text-sm">Fresh digital artwork and conceptual design released directly from the RILOJAVAN studio collection.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacts & Inquiry Section -->
-    <section id="contact" class="py-24 border-t border-slate-800/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold mb-6">Get In Touch.</h2>
-                    <p class="text-slate-400 mb-8">Contact us for any professional electrical engineering work or creative studio project.</p>
-                    
-                    <div class="space-y-6 text-sm">
-                        <div>
-                            <p class="text-xs uppercase text-slate-500 font-bold mb-1">Email Address</p>
-                            <a href="mailto:javanart8@gmail.com" class="text-blue-400 font-semibold hover:underline">javanart8@gmail.com</a>
-                        </div>
-                        <div>
-                            <p class="text-xs uppercase text-slate-500 font-bold mb-1">Telephone / WhatsApp</p>
-                            <a href="https://wa.me/250786368180" class="text-blue-400 font-semibold hover:underline">+250 786 368 180</a>
-                        </div>
-                        <div>
-                            <p class="text-xs uppercase text-slate-500 font-bold mb-2">RILOJAVAN Social Media Hub</p>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="https://instagram.com/rilojavan" target="_blank" class="text-slate-300 hover:text-blue-400 transition-colors">Instagram (@rilojavan) ↗</a>
-                                <a href="https://tiktok.com/@rilojavan" target="_blank" class="text-slate-300 hover:text-blue-400 transition-colors">TikTok (@rilojavan) ↗</a>
-                                <a href="https://facebook.com" target="_blank" class="text-slate-300 hover:text-blue-400 transition-colors">Facebook (RILO JAVAN) ↗</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl">
-                    <h3 class="text-xl font-bold mb-6">Send Project Inquiry</h3>
-                    <form action="https://wa.me/250786368180" method="get" target="_blank" class="space-y-4">
-                        <div>
-                            <label class="block text-xs uppercase font-bold text-slate-400 mb-2">Your Name / Brand</label>
-                            <input type="text" name="text" placeholder
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all group md:col-span-2 lg:col-span-2 flex flex-col justify-between">
+                    <div class="h-48 bg-slate-8
