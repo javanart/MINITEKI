@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MINITEKI LTD - Electrical & Art Studio</title>
+    <title id="page-title">MINITEKI LTD - Electrical & Art Studio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -24,17 +24,17 @@
             </div>
             
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
-                <a href="#electrical" class="hover:text-blue-400 transition-colors">Electrical</a>
-                <a href="#art-studio" class="hover:text-blue-400 transition-colors">Art Studio</a>
-                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                <a href="#home" data-i18n="nav_home" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="#electrical" data-i18n="nav_electrical" class="hover:text-blue-400 transition-colors">Electrical</a>
+                <a href="#art-studio" data-i18n="nav_art" class="hover:text-blue-400 transition-colors">Art Studio</a>
+                <a href="#contact" data-i18n="nav_contact" class="hover:text-blue-400 transition-colors">Contact</a>
             </nav>
 
             <div class="flex items-center space-x-4">
-                <!-- Language Selector -->
+                <!-- Working Language Selector -->
                 <div class="flex items-center space-x-1 bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300">
-                    <span>Language:</span>
-                    <select id="langSelect" class="bg-transparent text-blue-400 focus:outline-none cursor-pointer">
+                    <span data-i18n="lang_label">Language:</span>
+                    <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-transparent text-blue-400 focus:outline-none cursor-pointer">
                         <option value="en" selected class="bg-slate-900 text-white">English</option>
                         <option value="fr" class="bg-slate-900 text-white">Français</option>
                         <option value="rw" class="bg-slate-900 text-white">Kinyarwanda</option>
@@ -52,19 +52,19 @@
     <section id="home" class="relative pt-20 pb-24 md:pt-32 md:pb-36 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div class="inline-flex items-center space-x-2 bg-blue-950/80 border border-blue-800/60 px-4 py-1.5 rounded-full text-xs font-semibold text-blue-400 mb-6">
-                <span>📍 Kigali, Rwanda — MINITEKI LTD</span>
+                <span data-i18n="hero_badge">📍 Kigali, Rwanda — MINITEKI LTD</span>
             </div>
             <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
-                ELECTRICAL & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">ART STUDIO</span>
+                <span data-i18n="hero_title_1">ELECTRICAL &</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500" data-i18n="hero_title_2">ART STUDIO</span>
             </h1>
-            <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed">
+            <p data-i18n="hero_desc" class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed">
                 Top-tier electrical installations, lighting solutions, wiring, consultancy, CCTV, and professional creative art in Kigali, Rwanda.
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#electrical" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-xl shadow-blue-600/30">
+                <a href="#electrical" data-i18n="btn_electrical" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-xl shadow-blue-600/30">
                     Explore Electrical Services
                 </a>
-                <a href="#art-studio" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-8 py-4 rounded-xl border border-slate-700 transition-all">
+                <a href="#art-studio" data-i18n="btn_art" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-8 py-4 rounded-xl border border-slate-700 transition-all">
                     Explore Art Studio
                 </a>
             </div>
@@ -75,24 +75,23 @@
     <section id="electrical" class="py-24 bg-slate-950/50 border-t border-slate-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
-                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-bold mb-3">Professional Enterprise</h2>
-                <p class="text-3xl sm:text-4xl font-extrabold">Electrical & Security Engineering</p>
+                <h2 data-i18n="elec_subtitle" class="text-xs uppercase tracking-widest text-blue-500 font-bold mb-3">Professional Enterprise</h2>
+                <p data-i18n="elec_title" class="text-3xl sm:text-4xl font-extrabold">Electrical & Security Engineering</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1: Electrical Installation (Ifoto yawe ya Breaker Panel) -->
+                <!-- Service 1 -->
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all group flex flex-col justify-between">
                     <div class="h-48 overflow-hidden bg-slate-800">
-                        <!-- Shyiramo izina ry'ifoto yawe hano nka src="ifoto_yawe.jpg" -->
                         <img src="electrical_panel.jpg" alt="Electrical Installation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-8 flex flex-col justify-between flex-grow">
                         <div>
                             <span class="text-xs font-mono text-blue-400 font-bold">Service 01</span>
-                            <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Electrical Installation</h3>
-                            <p class="text-slate-400 text-sm mb-6">Complete residential and commercial power installations, panel building, and facility maintenance[cite: 1].</p>
+                            <h3 data-i18n="s1_title" class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Electrical Installation</h3>
+                            <p data-i18n="s1_desc" class="text-slate-400 text-sm mb-6">Complete residential and commercial power installations, panel building, and facility maintenance.</p>
                         </div>
-                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Electrical%20Installation%20service." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
+                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Electrical%20Installation%20service." target="_blank" data-i18n="book_btn" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
                             Book Service ↗
                         </a>
                     </div>
@@ -106,10 +105,10 @@
                     <div class="p-8 flex flex-col justify-between flex-grow">
                         <div>
                             <span class="text-xs font-mono text-blue-400 font-bold">Service 02</span>
-                            <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Lighting Solutions</h3>
-                            <p class="text-slate-400 text-sm mb-6">Modern indoor, outdoor, architectural, and smart LED lighting setups designed for elegance and efficiency.</p>
+                            <h3 data-i18n="s2_title" class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Lighting Solutions</h3>
+                            <p data-i18n="s2_desc" class="text-slate-400 text-sm mb-6">Modern indoor, outdoor, architectural, and smart LED lighting setups designed for elegance and efficiency.</p>
                         </div>
-                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Lighting%20Solutions%20service." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
+                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Lighting%20Solutions%20service." target="_blank" data-i18n="book_btn" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
                             Book Service ↗
                         </a>
                     </div>
@@ -123,10 +122,10 @@
                     <div class="p-8 flex flex-col justify-between flex-grow">
                         <div>
                             <span class="text-xs font-mono text-blue-400 font-bold">Service 03</span>
-                            <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Wiring & Trunking</h3>
-                            <p class="text-slate-400 text-sm mb-6">Safe, clean, and code-compliant electrical cabling and structured wiring for buildings of any size.</p>
+                            <h3 data-i18n="s3_title" class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Wiring & Trunking</h3>
+                            <p data-i18n="s3_desc" class="text-slate-400 text-sm mb-6">Safe, clean, and code-compliant electrical cabling and structured wiring for buildings of any size.</p>
                         </div>
-                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Wiring%20service." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
+                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20to%20book%20Wiring%20service." target="_blank" data-i18n="book_btn" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
                             Book Service ↗
                         </a>
                     </div>
@@ -140,10 +139,10 @@
                     <div class="p-8 flex flex-col justify-between flex-grow">
                         <div>
                             <span class="text-xs font-mono text-blue-400 font-bold">Service 04</span>
-                            <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Electrical Consultancy</h3>
-                            <p class="text-slate-400 text-sm mb-6">Expert engineering advice, load calculations, blueprint reviews, and technical project supervision.</p>
+                            <h3 data-i18n="s4_title" class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">Electrical Consultancy</h3>
+                            <p data-i18n="s4_desc" class="text-slate-400 text-sm mb-6">Expert engineering advice, load calculations, blueprint reviews, and technical project supervision.</p>
                         </div>
-                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20Electrical%20Consultancy." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
+                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20Electrical%20Consultancy." target="_blank" data-i18n="inquire_btn" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
                             Inquire Now ↗
                         </a>
                     </div>
@@ -157,10 +156,10 @@
                     <div class="p-8 flex flex-col justify-between flex-grow">
                         <div>
                             <span class="text-xs font-mono text-blue-400 font-bold">Service 05</span>
-                            <h3 class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">CCTV Camera Installation & Security</h3>
-                            <p class="text-slate-400 text-sm mb-6">Advanced HD surveillance systems, night-vision cameras, NVR configurations, and live mobile monitoring setup for absolute security.</p>
+                            <h3 data-i18n="s5_title" class="text-xl font-bold mt-2 mb-3 group-hover:text-blue-400 transition-colors">CCTV Camera Installation & Security</h3>
+                            <p data-i18n="s5_desc" class="text-slate-400 text-sm mb-6">Advanced HD surveillance systems, night-vision cameras, NVR configurations, and live mobile monitoring setup for absolute security.</p>
                         </div>
-                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20CCTV%20Camera%20Installation." target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
+                        <a href="https://wa.me/250786368180?text=Hello%20MINITEKI,%20I%20want%20CCTV%20Camera%20Installation." target="_blank" data-i18n="book_cctv_btn" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
                             Book CCTV Installation ↗
                         </a>
                     </div>
@@ -173,8 +172,8 @@
     <section id="art-studio" class="py-24 border-t border-slate-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
-                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-bold mb-3">MINITEKI Studio</h2>
-                <p class="text-3xl sm:text-4xl font-extrabold">Art & Creative Design Division</p>
+                <h2 data-i18n="art_subtitle" class="text-xs uppercase tracking-widest text-blue-500 font-bold mb-3">MINITEKI Studio</h2>
+                <p data-i18n="art_title" class="text-3xl sm:text-4xl font-extrabold">Art & Creative Design Division</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -186,10 +185,10 @@
                     <div class="p-8 flex flex-col justify-between flex-grow">
                         <div>
                             <span class="text-xs font-mono text-indigo-400 font-bold">01. Graphic Design</span>
-                            <h3 class="text-xl font-bold mt-2 mb-3">Graphic Design</h3>
-                            <p class="text-slate-400 text-sm mb-6">Custom posters, professional flyers, banners, and high-impact visual layouts tailored for corporate and creative use.</p>
+                            <h3 data-i18n="d1_title" class="text-xl font-bold mt-2 mb-3">Graphic Design</h3>
+                            <p data-i18n="d1_desc" class="text-slate-400 text-sm mb-6">Custom posters, professional flyers, banners, and high-impact visual layouts tailored for corporate and creative use.</p>
                         </div>
-                        <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Graphic%20Design%20services." target="_blank" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
+                        <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Graphic%20Design%20services." target="_blank" data-i18n="req_design_btn" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
                             Request Design ↗
                         </a>
                     </div>
@@ -203,10 +202,10 @@
                     <div class="p-8 flex flex-col justify-between flex-grow">
                         <div>
                             <span class="text-xs font-mono text-indigo-400 font-bold">02. Branding</span>
-                            <h3 class="text-xl font-bold mt-2 mb-3">Branding & Packaging Design</h3>
-                            <p class="text-slate-400 text-sm mb-6">Complete brand identity creation, minimalist logos, corporate guidelines, and professional product packaging design.</p>
+                            <h3 data-i18n="d2_title" class="text-xl font-bold mt-2 mb-3">Branding & Packaging Design</h3>
+                            <p data-i18n="d2_desc" class="text-slate-400 text-sm mb-6">Complete brand identity creation, minimalist logos, corporate guidelines, and professional product packaging design.</p>
                         </div>
-                        <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Branding%20services." target="_blank" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
+                        <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Branding%20services." target="_blank" data-i18n="req_brand_btn" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
                             Request Branding ↗
                         </a>
                     </div>
@@ -220,10 +219,10 @@
                     <div class="p-8 flex flex-col justify-between flex-grow">
                         <div>
                             <span class="text-xs font-mono text-indigo-400 font-bold">03. Social Media</span>
-                            <h3 class="text-xl font-bold mt-2 mb-3">Social Media Design</h3>
-                            <p class="text-slate-400 text-sm mb-6">Aesthetic feeds, post templates, and digital content engineered specifically for Instagram, TikTok, and Facebook.</p>
+                            <h3 data-i18n="d3_title" class="text-xl font-bold mt-2 mb-3">Social Media Design</h3>
+                            <p data-i18n="d3_desc" class="text-slate-400 text-sm mb-6">Aesthetic feeds, post templates, and digital content engineered specifically for Instagram, TikTok, and Facebook.</p>
                         </div>
-                        <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Social%20Media%20Design." target="_blank" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
+                        <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Social%20Media%20Design." target="_blank" data-i18n="req_content_btn" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
                             Request Content ↗
                         </a>
                     </div>
@@ -237,10 +236,10 @@
                     <div class="p-8 flex flex-col justify-between flex-grow">
                         <div>
                             <span class="text-xs font-mono text-indigo-400 font-bold">04. Digital Art</span>
-                            <h3 class="text-xl font-bold mt-2 mb-3">Digital Art & Illustration</h3>
-                            <p class="text-slate-400 text-sm mb-6">Breathtaking digital illustrations, conceptual artwork, modern portraits, and creative visual masterpieces crafted with unmatched precision.</p>
+                            <h3 data-i18n="d4_title" class="text-xl font-bold mt-2 mb-3">Digital Art & Illustration</h3>
+                            <p data-i18n="d4_desc" class="text-slate-400 text-sm mb-6">Breathtaking digital illustrations, conceptual artwork, modern portraits, and creative visual masterpieces crafted with unmatched precision.</p>
                         </div>
-                        <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Digital%20Art%20services." target="_blank" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
+                        <a href="https://wa.me/250786368180?text=Hello%20RILO,%20I%20need%20Digital%20Art%20services." target="_blank" data-i18n="req_art_btn" class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300">
                             Request Digital Art ↗
                         </a>
                     </div>
@@ -254,20 +253,20 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold mb-6">Get In Touch.</h2>
-                    <p class="text-slate-400 mb-8">Contact us for any professional electrical engineering work or creative studio project.</p>
+                    <h2 data-i18n="contact_heading" class="text-3xl sm:text-4xl font-extrabold mb-6">Get In Touch.</h2>
+                    <p data-i18n="contact_desc" class="text-slate-400 mb-8">Contact us for any professional electrical engineering work or creative studio project.</p>
                     
                     <div class="space-y-6 text-sm mb-8">
                         <div>
-                            <p class="text-xs uppercase text-slate-500 font-bold mb-1">Email Address</p>
+                            <p data-i18n="email_label" class="text-xs uppercase text-slate-500 font-bold mb-1">Email Address</p>
                             <a href="mailto:javanart8@gmail.com" class="text-blue-400 font-semibold hover:underline">javanart8@gmail.com</a>
                         </div>
                         <div>
-                            <p class="text-xs uppercase text-slate-500 font-bold mb-1">Telephone / WhatsApp</p>
+                            <p data-i18n="phone_label" class="text-xs uppercase text-slate-500 font-bold mb-1">Telephone / WhatsApp</p>
                             <a href="https://wa.me/250786368180" class="text-blue-400 font-semibold hover:underline">+250 786 368 180</a>
                         </div>
                         <div>
-                            <p class="text-xs uppercase text-slate-500 font-bold mb-2">RILOJAVAN Social Media Hub</p>
+                            <p data-i18n="social_label" class="text-xs uppercase text-slate-500 font-bold mb-2">RILOJAVAN Social Media Hub</p>
                             <div class="flex flex-wrap gap-4">
                                 <a href="https://instagram.com/rilojavan" target="_blank" class="text-slate-300 hover:text-blue-400 transition-colors">Instagram (@rilojavan) ↗</a>
                                 <a href="https://tiktok.com/@rilojavan" target="_blank" class="text-slate-300 hover:text-blue-400 transition-colors">TikTok (@rilojavan) ↗</a>
@@ -279,17 +278,17 @@
 
                 <!-- Direct Form -->
                 <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl shadow-2xl">
-                    <h3 class="text-xl font-bold mb-6">Send Project Inquiry</h3>
+                    <h3 data-i18n="form_title" class="text-xl font-bold mb-6">Send Project Inquiry</h3>
                     <form action="https://wa.me/250786368180" method="get" target="_blank" class="space-y-4">
                         <div>
-                            <label class="block text-xs uppercase font-bold text-slate-400 mb-2">Your Name / Brand</label>
+                            <label data-i18n="form_name_label" class="block text-xs uppercase font-bold text-slate-400 mb-2">Your Name / Brand</label>
                             <input type="text" name="text" placeholder="Enter your name..." required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-blue-500 text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs uppercase font-bold text-slate-400 mb-2">Project Specifications</label>
+                            <label data-i18n="form_spec_label" class="block text-xs uppercase font-bold text-slate-400 mb-2">Project Specifications</label>
                             <textarea rows="4" name="text" placeholder="Describe your technical or creative requirement..." required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-blue-500 text-sm"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/20 text-sm">
+                        <button type="submit" data-i18n="form_submit_btn" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/20 text-sm">
                             Dispatch via WhatsApp ↗
                         </button>
                     </form>
@@ -300,8 +299,179 @@
 
     <!-- Footer -->
     <footer class="py-12 border-t border-slate-800 text-center text-xs text-slate-500">
-        <p>© 2026 MINITEKI LTD. All rights reserved. Kigali, Rwanda.</p>
+        <p data-i18n="footer_text">© 2026 MINITEKI LTD. All rights reserved. Kigali, Rwanda.</p>
     </footer>
 
+    <!-- JavaScript for Language Translation Engine -->
+    <script>
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_electrical: "Electrical",
+                nav_art: "Art Studio",
+                nav_contact: "Contact",
+                lang_label: "Language:",
+                hero_badge: "📍 Kigali, Rwanda — MINITEKI LTD",
+                hero_title_1: "ELECTRICAL &",
+                hero_title_2: "ART STUDIO",
+                hero_desc: "Top-tier electrical installations, lighting solutions, wiring, consultancy, CCTV, and professional creative art in Kigali, Rwanda.",
+                btn_electrical: "Explore Electrical Services",
+                btn_art: "Explore Art Studio",
+                elec_subtitle: "Professional Enterprise",
+                elec_title: "Electrical & Security Engineering",
+                s1_title: "Electrical Installation",
+                s1_desc: "Complete residential and commercial power installations, panel building, and facility maintenance.",
+                s2_title: "Lighting Solutions",
+                s2_desc: "Modern indoor, outdoor, architectural, and smart LED lighting setups designed for elegance and efficiency.",
+                s3_title: "Wiring & Trunking",
+                s3_desc: "Safe, clean, and code-compliant electrical cabling and structured wiring for buildings of any size.",
+                s4_title: "Electrical Consultancy",
+                s4_desc: "Expert engineering advice, load calculations, blueprint reviews, and technical project supervision.",
+                s5_title: "CCTV Camera Installation & Security",
+                s5_desc: "Advanced HD surveillance systems, night-vision cameras, NVR configurations, and live mobile monitoring setup for absolute security.",
+                art_subtitle: "MINITEKI Studio",
+                art_title: "Art & Creative Design Division",
+                d1_title: "Graphic Design",
+                d1_desc: "Custom posters, professional flyers, banners, and high-impact visual layouts tailored for corporate and creative use.",
+                d2_title: "Branding & Packaging Design",
+                d2_desc: "Complete brand identity creation, minimalist logos, corporate guidelines, and professional product packaging design.",
+                d3_title: "Social Media Design",
+                d3_desc: "Aesthetic feeds, post templates, and digital content engineered specifically for Instagram, TikTok, and Facebook.",
+                d4_title: "Digital Art & Illustration",
+                d4_desc: "Breathtaking digital illustrations, conceptual artwork, modern portraits, and creative visual masterpieces crafted with unmatched precision.",
+                book_btn: "Book Service ↗",
+                inquire_btn: "Inquire Now ↗",
+                book_cctv_btn: "Book CCTV Installation ↗",
+                req_design_btn: "Request Design ↗",
+                req_brand_btn: "Request Branding ↗",
+                req_content_btn: "Request Content ↗",
+                req_art_btn: "Request Digital Art ↗",
+                contact_heading: "Get In Touch.",
+                contact_desc: "Contact us for any professional electrical engineering work or creative studio project.",
+                email_label: "Email Address",
+                phone_label: "Telephone / WhatsApp",
+                social_label: "RILOJAVAN Social Media Hub",
+                form_title: "Send Project Inquiry",
+                form_name_label: "Your Name / Brand",
+                form_spec_label: "Project Specifications",
+                form_submit_btn: "Dispatch via WhatsApp ↗",
+                footer_text: "© 2026 MINITEKI LTD. All rights reserved. Kigali, Rwanda."
+            },
+            fr: {
+                nav_home: "Accueil",
+                nav_electrical: "Électrique",
+                nav_art: "Studio d'Art",
+                nav_contact: "Contact",
+                lang_label: "Langue :",
+                hero_badge: "📍 Kigali, Rwanda — MINITEKI LTD",
+                hero_title_1: "INSTALLATIONS ÉLECTRIQUES &",
+                hero_title_2: "STUDIO D'ART",
+                hero_desc: "Installations électriques de premier ordre, solutions d'éclairage, câblage, conseil, vidéosurveillance et art créatif professionnel à Kigali, Rwanda.",
+                btn_electrical: "Explorer les Services Électriques",
+                btn_art: "Explorer le Studio d'Art",
+                elec_subtitle: "Entreprise Professionnelle",
+                elec_title: "Ingénierie Électrique & Sécurité",
+                s1_title: "Installation Électrique",
+                s1_desc: "Installations électriques résidentielles et commerciales complètes, assemblage de tableaux et maintenance.",
+                s2_title: "Solutions d'Éclairage",
+                s2_desc: "Installations d'éclairage LED intérieures, extérieures, architecturales et intelligentes.",
+                s3_title: "Câblage & goulottes",
+                s3_desc: "Câblage électrique sûr, propre et conforme aux normes pour des bâtiments de toutes tailles.",
+                s4_title: "Conseil en Électricité",
+                s4_desc: "Conseils d'ingénierie experts, calculs de charge, révision de plans et supervision de projets.",
+                s5_title: "Installation Caméras CCTV & Sécurité",
+                s5_desc: "Systèmes de surveillance HD avancés, caméras de vision nocturne et configuration de surveillance mobile.",
+                art_subtitle: "Studio MINITEKI",
+                art_title: "Division Art & Design Créatif",
+                d1_title: "Design Graphique",
+                d1_desc: "Affiches personnalisées, dépliants professionnels et mises en page visuelles à impact élevé.",
+                d2_title: "Branding & Design d'Emballage",
+                d2_desc: "Création d'identité de marque complète, logos minimalistes et design d'emballage professionnel.",
+                d3_title: "Design Médias Sociaux",
+                d3_desc: "Flux esthétiques, modèles de publications et contenus numériques conçus pour Instagram, TikTok et Facebook.",
+                d4_title: "Art Numérique & Illustration",
+                d4_desc: "Illustrations numériques époustouflantes, œuvres conceptuelles et portraits modernes.",
+                book_btn: "Réserver le Service ↗",
+                inquire_btn: "Demander ↗",
+                book_cctv_btn: "Réserver Installation CCTV ↗",
+                req_design_btn: "Demander un Design ↗",
+                req_brand_btn: "Demander le Branding ↗",
+                req_content_btn: "Demander du Contenu ↗",
+                req_art_btn: "Demander Art Numérique ↗",
+                contact_heading: "Contactez-nous.",
+                contact_desc: "Contactez-nous pour tout travail d'ingénierie électrique ou projet de studio créatif.",
+                email_label: "Adresse Email",
+                phone_label: "Téléphone / WhatsApp",
+                social_label: "Hub Médias Sociaux RILOJAVAN",
+                form_title: "Envoyer une Demande de Projet",
+                form_name_label: "Votre Nom / Marque",
+                form_spec_label: "Spécifications du Projet",
+                form_submit_btn: "Envoyer via WhatsApp ↗",
+                footer_text: "© 2026 MINITEKI LTD. Tous droits réservés. Kigali, Rwanda."
+            },
+            rw: {
+                nav_home: "Ahabanza",
+                nav_electrical: "Amashanyarazi",
+                nav_art: "Art Studio",
+                nav_contact: "Twandikire",
+                lang_label: "Ururimi:",
+                hero_badge: "📍 Kigali, Rwanda — MINITEKI LTD",
+                hero_title_1: "AMASHANYARAZI &",
+                hero_title_2: "ART STUDIO",
+                hero_desc: "Serivisi z'amashanyarazi zigezweho, ubuhanga mu nkingi z'urumuri, insinga, inama za tekiniki, CCTV, n'ubuhanzi buhanitse i Kigali, mu Rwanda.",
+                btn_electrical: "Reba Serivisi z'Amashanyarazi",
+                btn_art: "Reba Art Studio",
+                elec_subtitle: "Kompanyi y'Umwuga",
+                elec_title: "Ubwubatsi bw'Amashanyarazi n'Umutekano",
+                s1_title: "Gushyiraho Amashanyarazi (Electrical Installation)",
+                s1_desc: "Gushyiraho amashanyarazi mu nzu no mu bigo, kubaka utubati tw'amashanyarazi, no kuyakurikirana.",
+                s2_title: "Uburyo bw'Amatara n'Urumuri",
+                s2_desc: "Kunyanyagiza amatara agezweho mu nzu no hanze, LED zigezweho ziteye neza kandi zizigama.",
+                s3_title: "Gushyira Insinga mu Muyoboro",
+                s3_desc: "Gutunganya insinga z'amashanyarazi mu buryo bwiza, butagira amakosa kandi buhuye n'amategeko.",
+                s4_title: "Inama za Tekiniki y'Amashanyarazi",
+                s4_desc: "Inama z'inzobere mu bumenyi bw'amashanyarazi, kubara ingufu zikenewe no kugenzura imishinga.",
+                s5_title: "Gushyira Cameras za CCTV n'Umutekano",
+                s5_desc: "Sisitemu zigezweho zo kugenzura umutekano (CCTV), cameras zireba nijoro na za NVR.",
+                art_subtitle: "MINITEKI Studio",
+                art_title: "Ishami ry'Ubuhanzi no Gushushanya",
+                d1_title: "Gushushanya Amashusho (Graphic Design)",
+                d1_desc: "Ibyapa byiza, amafiye y'umwuga, n'imbonerahamwe ziteye imbere zo kwamamaza.",
+                d2_title: "Branding n'Imizingiro y'Ibicuruzwa",
+                d2_desc: "Gukora ikirango cya kompanyi (logo), inyandiko ngenderwaho na branding yose.",
+                d3_title: "Ibikorwa byo ku mbuga nkoranyambaga",
+                d3_desc: "Imiterere y'inkuta za Instagram, TikTok na Facebook yagenewe kwamamaza neza.",
+                d4_title: "Ubuhanzi bwa Dijitalike n'Ubugeni",
+                d4_desc: "Amashusho y'ubugeni bwa dijitalike atangaje, amashusho meza n'ibihangano by'umwuga.",
+                book_btn: "Fata Serivisi ↗",
+                inquire_btn: "Sobanukirwa ↗",
+                book_cctv_btn: "Fata Serivisi ya CCTV ↗",
+                req_design_btn: "Saba Igishushanyo ↗",
+                req_brand_btn: "Saba Branding ↗",
+                req_content_btn: "Saba Ibikoresho byo kuri Net ↗",
+                req_art_btn: "Saba Ubugeni ↗",
+                contact_heading: "Twandikire cyangwa Duhamagare.",
+                contact_desc: "Tuvugishe kuri serivisi zose z'amashanyarazi cyangwa se imishinga y'ubuhanzi.",
+                email_label: "Imeli (Email)",
+                phone_label: "Nimero ya Telephone / WhatsApp",
+                social_label: "Imbuga Nkoranyambaga za RILOJAVAN",
+                form_title: "Ohereza Ubutumwa bw'Akazi",
+                form_name_label: "Izina ryawe / Kompanyi",
+                form_spec_label: "Ibisobanuro by'Umishinga",
+                form_submit_btn: "Ohereza kuri WhatsApp ↗",
+                footer_text: "© 2026 MINITEKI LTD. Uburenganzira bwose burabitswe. Kigali, Rwanda."
+            }
+        };
+
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+        }
+    </script>
 </body>
 </html>
